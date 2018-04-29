@@ -65,6 +65,9 @@ group :development do
   gem 'better_errors'
   # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
   gem 'lerolero_generator'
+  # FA library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker', '~> 1.8', '>= 1.8.7'
+
 end
 
 group :test do
