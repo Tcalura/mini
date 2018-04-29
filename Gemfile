@@ -24,6 +24,10 @@ gem 'devise'
 gem 'devise-i18n'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# Rails gem of the Bootstrap based admin theme SB Admin 2.
+gem 'bootstrap_sb_admin_base_v2'
+# the font-awesome font bundled as an asset for the rails asset pipeline
+gem "font-awesome-rails"
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
