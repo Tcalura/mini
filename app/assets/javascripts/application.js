@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap_sb_admin_base_v2
+//= require cocoon
 //= require_tree .

@@ -1,0 +1,34 @@
+<%#= render partial: 'profile/menu'  %>
+
+<%= form_for @list, url: {action: "create"}, html:{ class: "dark-matter" } do |f| %>
+  <% if @list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :"Tipo da lista" %>
+    <%= f.select :kind, options_for_kinds(@list.kind) %>
+  </div>
+
+
+  <div id="task">
+    <%= link_to_add_association('[Adicionar Tarefa]', f, :tasks) %>
+      <%= f.fields_for :tasks  do |tasks_fields| %>
+        <%= render partial: "task_fields", locals: {f: tasks_fields}  %>
+      <% end %>
+  </div>
+  <br>
+
+  <div>
+    <%= f.submit :Criar, class: "button" %>
+    <%= link_to :Voltar, profile_index_path, class: "button"%>
+  </div>
+<% end %>

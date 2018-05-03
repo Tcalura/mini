@@ -28,7 +28,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap_sb_admin_base_v2'
 # the font-awesome font bundled as an asset for the rails asset pipeline
 gem "font-awesome-rails"
-
+# Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms http://github.com/nathanvda/cocoon
+gem "cocoon"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 # Use CoffeeScript for .coffee assets and views
@@ -41,8 +42,6 @@ gem "font-awesome-rails"
 # gem 'mini_magick', '~> 4.8'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-
 
 source 'https://rails-assets.org' do
   # rails-assets bootstrap
@@ -57,6 +56,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
+  # Rails >= 3 pry initializer
+  gem 'pry-rails'
 end
 
 group :development do

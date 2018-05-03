@@ -14,10 +14,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                  <%= link_to "Criar Listas", destroy_user_session_path, method: :delete %>
+                  <%= link_to "Criar Listas", new_list_path %>
+                </li>
+                  <%= link_to "Suas Listas", list_index_path %>
                 </li>
                 <li>
-                  <%= link_to "Favoritos", destroy_user_session_path, method: :delete %>
+                  <%= link_to "Favoritos", "#" %>
                 </li>
                 <li>
                     <%= link_to current_user.email, "#" %>
@@ -31,3 +33,6 @@
     </div>
     <!-- /.container -->
 </nav>
+
+<br>
+<br>
